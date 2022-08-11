@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Kullanici.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css"> </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="width: 700px; height: 150px; margin-left: 300px;background-color: #FFCC99;"></div> 
+        <div style="margin-left: 300px; width: 700px; height: 20px;">&nbsp;</div>
+        <div style="width: 700px; height: 25px; margin-left: 300px; background-color: white" class="auto-style5">
+            <table style="width: 100%;font-size: medium;">
+                <tr>
+                    <td class="auto-style4"><strong><a href="AnaSayfa.aspx">ANA SAYFA</a></strong></td>
+                    <td class="auto-style4"><strong><a href="GununYemegi.aspx">GÜNÜN YEMEĞİ</a></strong></td>
+                    <td class="auto-style4"><strong><a href="TarifOner.aspx">TARİF ÖNER</a></strong></td>
+                    <td class="auto-style4"><strong><a href="Hakkimizda.aspx">HAKKIMIZDA</a></strong></td>
+                    <td class="auto-style4"><strong><a href="Iletisim.aspx">İLETİŞİM</a></strong></td>
+                </tr>
+            </table>
+        </div>
+        <div style="margin-left: 300px; width: 700px; height: 20px;"></div>
+        <div style="margin-left: 300px; width: 700px; height: 500px;">
+            <div style="margin-left: 0px; float:left; background-color:#FFCCFF; width: 200px; height: 200px;"></div> <%--float:left solundakine göre hizalamayı sağlar.--%>
+            <div style="margin-left:50px;float:left; background-color: #FFCCFF; width: 450px; height: 300px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
