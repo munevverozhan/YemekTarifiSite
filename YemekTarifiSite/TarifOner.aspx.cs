@@ -10,6 +10,16 @@ public partial class TarifOner : System.Web.UI.Page
 {
     sqlBaglantiClass bgl = new sqlBaglantiClass();
 
+    void temizle()
+    {
+        txtTarif.Text = "";
+        txtMail.Text = "";
+        txtMalzeme.Text = "";
+        txtTarifSahip.Text = "";
+        txtYapilis.Text = "";
+
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -25,6 +35,7 @@ public partial class TarifOner : System.Web.UI.Page
         komut.Parameters.AddWithValue("@p6",txtMail.Text);
         komut.ExecuteNonQuery();
         bgl.Baglanti().Close();
+        temizle();
         Response.Write("Tarifiniz alınmıştır.Teşekkür ederiz..");
         
 
