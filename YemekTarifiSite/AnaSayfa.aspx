@@ -5,25 +5,32 @@
         .auto-style6 {
             width: 100%;
         }
+
         .auto-style7 {
             font-size: x-large;
         }
+
         .auto-style8 {
             background-color: #CCFFFF;
         }
+
         .auto-style9 {
             height: 23px;
-            
         }
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:DataList ID="DataList2" runat="server">
         <ItemTemplate>
             <table class="auto-style6">
                 <tr>
                     <td class="auto-style8">
-                        <asp:Label ID="Label9" runat="server" CssClass="auto-style7" Text='<%# Eval("yemekAd") %>'></asp:Label>
+                        
+                        <%-- yemek detay formuna yönlendirme işlemi yapıldı.seçilen yemeğin id değeri elde edildi. --%>
+                        <a href="YemekDetay.aspx?yemekID=<%#Eval("yemekID")%> ">
+                            <asp:Label ID="Label9" runat="server" CssClass="auto-style7" Text='<%# Eval("yemekAd") %>'></asp:Label>
+                        </a>
                     </td>
                 </tr>
                 <tr>
