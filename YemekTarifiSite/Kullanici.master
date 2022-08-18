@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
-    <link href="StyleSheet.css" rel="stylesheet" />
+    <link href="kullanici.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -18,7 +18,7 @@
             font-size: large;
         }
         .auto-style4 {
-            color: #faf7dc;
+            color: #FC427B;
         }
         .auto-style5 {
             width: 100%;
@@ -30,7 +30,7 @@
     <form id="form1" runat="server">
         <div style="width: 700px; height: 150px; margin-left: 300px;background-color: #FFCC99;"></div> 
         <div style="margin-left: 300px; width: 700px; height: 20px;">&nbsp;</div>
-        <div style="width: 700px; height: 40px; margin-left: 300px; background-color: #faf7dc ";>
+        <div style="width: 700px; height: 40px; margin-left: 300px; background-color: #ffffff ";>
             <table style="font-size: medium;" class="auto-style5">
                 <tr>
                     <td class="auto-style4"><strong><a href="AnaSayfa.aspx">ANA SAYFA</a></strong></td>
@@ -43,7 +43,7 @@
         </div>
         <div style="margin-left: 300px; width: 700px; height: 20px;"></div>
         <div style="margin-left: 300px; " class="auto-style1">
-            <div style="border-color: #000000; margin-left: 0px; float:left; background-color:#ff006e; width: 200px; height: auto;">
+            <div style="border-color: #55E6C1; margin-left: 0px; float:left; background-color:#F8EFBA; width: 200px; height: auto;">
                 <div >
                     <strong><span class="auto-style2"><em>&nbsp;<span class="auto-style4">KATEGORİLER</span></em></span></strong>
                     <br />
@@ -51,7 +51,7 @@
                 </div>
                 <asp:DataList ID="DataList1" runat="server" Width="200px">
                     <ItemTemplate>
-                        <div style="border: medium solid #faf7dc">
+                        <div style="border: medium solid #FC427B">
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("kategoriAd") %>'></asp:Label>
                             &nbsp;(
                             <asp:Label ID="Label2" runat="server" Font-Bold="True" Text='<%# Eval("kategoriAdet") %>'></asp:Label>
@@ -59,7 +59,7 @@
                     </ItemTemplate>
                 </asp:DataList>
             </div> <%--float:left solundakine göre hizalamayı sağlar.--%>
-            <div style="margin-left:50px;float:left; background-color: #FFCCFF; width: 450px; height:auto;">
+            <div style="margin-left:50px;float:left; background-color: #F8EFBA; width: 450px; height:auto;">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
             </div>
         </div>

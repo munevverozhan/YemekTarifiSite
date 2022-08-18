@@ -8,14 +8,19 @@
 
         .auto-style7 {
             font-size: x-large;
+            font-family: 'Franklin Gothic Medium';
         }
 
         .auto-style8 {
-            background-color: #CCFFFF;
+            background-color: #7bed9f;
         }
 
         .auto-style9 {
             height: 23px;
+        }
+
+        .text {
+            font-family: 'Comic Sans MS';
         }
     </style>
 </asp:Content>
@@ -26,21 +31,21 @@
             <table class="auto-style6">
                 <tr>
                     <td class="auto-style8">
-                        
+
                         <%-- yemek detay formuna yönlendirme işlemi yapıldı.seçilen yemeğin id değeri elde edildi. --%>
-                        <a href="YemekDetay.aspx?yemekID=<%#Eval("yemekID")%> ">
-                            <asp:Label ID="Label9" runat="server" CssClass="auto-style7" Text='<%# Eval("yemekAd") %>'></asp:Label>
+                        <a href="YemekDetay.aspx?yemekID=<%#Eval("yemekID")%>">
+                            <asp:Label  ID="Label9" runat="server" CssClass="auto-style7" Text='<%# Eval("yemekAd") %>'></asp:Label>
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td><strong>Malzemeler :</strong>
-                        <asp:Label ID="Label10" runat="server" Text='<%# Eval("yemekMalzeme") %>'></asp:Label>
+                        <asp:Label class="text" ID="Label10" runat="server" Text='<%# Eval("yemekMalzeme") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td><strong>Yapılış :</strong>
-                        <asp:Label ID="Label5" runat="server" Text='<%# Eval("yemekTarif") %>'></asp:Label>
+                        <asp:Label class="text" ID="Label5" runat="server" Text='<%# Eval("yemekTarif") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -49,7 +54,7 @@
                 <tr>
                     <td><strong>Eklenme Tarihi :</strong>&nbsp;<asp:Label ID="Label7" runat="server" Text='<%# Eval("yemekTarih") %>'></asp:Label>
                         &nbsp; <strong>Puan :</strong>
-                        <asp:Label ID="Label8" runat="server" Text='<%# Eval("yemekPuan") %>'></asp:Label>
+                        <asp:Label class="text" ID="Label8" runat="server" Text='<%# Eval("yemekPuan") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>

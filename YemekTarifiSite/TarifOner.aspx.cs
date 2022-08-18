@@ -33,11 +33,39 @@ public partial class TarifOner : System.Web.UI.Page
         komut.Parameters.AddWithValue("@p4",txtResim.FileName);
         komut.Parameters.AddWithValue("@p5",txtTarifSahip.Text);
         komut.Parameters.AddWithValue("@p6",txtMail.Text);
-        komut.ExecuteNonQuery();
-        bgl.Baglanti().Close();
-        temizle();
-        Response.Write("Tarifiniz alınmıştır.Teşekkür ederiz..");
-        
+        if (txtTarif.Text == "")
+        {
+            Response.Write("Lütfen tarifin ismini giriniz...");
+        }
+        else if (txtMalzeme.Text == "")
+        {
+            Response.Write("Lütfen tarifin malzemelerini giriniz...");
+        }
+        else if (txtYapilis.Text == "")
+        {
+            Response.Write("Lütfen tarifin yapılışını giriniz...");
+        }
+        else if (txtResim.FileName == "")
+        {
+            Response.Write("Lütfen tarifin resimini seçiniz...");
+        }
+        else if (txtTarifSahip.Text == "")
+        {
+            Response.Write("Lütfen isminizi giriniz...");
+        }
+        else if (txtMail.Text == "")
+        {
+            Response.Write("Lütfen mail adresinizi giriniz...");
+        }
+        else
+        {
+            komut.ExecuteNonQuery();
+            bgl.Baglanti().Close();
+            temizle();
+            Response.Write("Tarifiniz alınmıştır.Teşekkür ederiz..");
+
+        }
+
 
 
     }
