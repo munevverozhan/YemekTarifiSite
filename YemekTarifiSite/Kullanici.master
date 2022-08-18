@@ -19,10 +19,17 @@
         }
         .auto-style4 {
             color: #FC427B;
+            font-family:Cambria;
+
         }
         .auto-style5 {
             width: 100%;
             height: 38px;
+        }
+        .text{
+            font-family:Cambria;
+            color:#1e272e;
+            font:bold;
         }
     </style>
 </head>
@@ -49,15 +56,17 @@
                     <br />
                     
                 </div>
+                <strong>
                 <asp:DataList ID="DataList1" runat="server" Width="200px">
                     <ItemTemplate>
                         <div style="border: medium solid #FC427B">
-                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("kategoriAd") %>'></asp:Label>
+                          <a href="KategoriDetay.aspx?kategoriID=<%#Eval("kategoriID")%>">  <asp:Label class="text" ID="Label1" runat="server" Text='<%# Eval("kategoriAd") %>'></asp:Label></a>
                             &nbsp;(
                             <asp:Label ID="Label2" runat="server" Font-Bold="True" Text='<%# Eval("kategoriAdet") %>'></asp:Label>
                             )</div>
                     </ItemTemplate>
                 </asp:DataList>
+                </strong>
             </div> <%--float:left solundakine göre hizalamayı sağlar.--%>
             <div style="margin-left:50px;float:left; background-color: #F8EFBA; width: 450px; height:auto;">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
