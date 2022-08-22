@@ -14,22 +14,25 @@
             width: 700px;
             height: 900px;
         }
+
         .auto-style2 {
             font-size: large;
         }
+
         .auto-style4 {
             color: #FC427B;
-            font-family:Cambria;
-
+            font-family: Cambria;
         }
+
         .auto-style5 {
             width: 100%;
             height: 38px;
         }
-        .text{
-            font-family:Cambria;
-            color:#1e272e;
-            font:bold;
+
+        .text {
+            font-family: Cambria;
+            color: #1e272e;
+            font: bold;
         }
     </style>
 </head>
@@ -60,10 +63,10 @@
                 <asp:DataList ID="DataList1" runat="server" Width="200px">
                     <ItemTemplate>
                         <div style="border: medium solid #FC427B">
+                            <%--KATEGORİ İÇİN YÖNLENDİRME İŞLEMİ YAPILDI.--%>
                           <a href="KategoriDetay.aspx?kategoriID=<%#Eval("kategoriID")%>">  <asp:Label class="text" ID="Label1" runat="server" Text='<%# Eval("kategoriAd") %>'></asp:Label></a>
-                            &nbsp;(
-                            <asp:Label ID="Label2" runat="server" Font-Bold="True" Text='<%# Eval("kategoriAdet") %>'></asp:Label>
-                            )</div>
+                            &nbsp;
+                            (<asp:Label ID="Label2" runat="server" Font-Bold="True" Text='<%# Eval("kategoriAdet") %>'></asp:Label>)</div>
                     </ItemTemplate>
                 </asp:DataList>
                 </strong>

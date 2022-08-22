@@ -19,7 +19,7 @@
             height: 23px;
         }
 
-        .text {
+        .txt {
             font-family: 'Comic Sans MS';
         }
     </style>
@@ -40,12 +40,12 @@
                 </tr>
                 <tr>
                     <td><strong>Malzemeler :</strong>
-                        <asp:Label class="text" ID="Label10" runat="server" Text='<%# Eval("yemekMalzeme") %>'></asp:Label>
+                        <asp:Label class="txt" ID="Label10" runat="server" Text='<%# Eval("yemekMalzeme") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td><strong>Yapılış :</strong>
-                        <asp:Label class="text" ID="Label5" runat="server" Text='<%# Eval("yemekTarif") %>'></asp:Label>
+                        <asp:Label class="txt" ID="Label5" runat="server" Text='<%# Eval("yemekTarif") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -54,7 +54,7 @@
                 <tr>
                     <td><strong>Eklenme Tarihi :</strong>&nbsp;<asp:Label ID="Label7" runat="server" Text='<%# Eval("yemekTarih") %>'></asp:Label>
                         &nbsp; <strong>Puan :</strong>
-                        <asp:Label class="text" ID="Label8" runat="server" Text='<%# Eval("yemekPuan") %>'></asp:Label>
+                        <asp:Label class="txt" ID="Label8" runat="server" Text='<%# Eval("yemekPuan") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
