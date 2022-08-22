@@ -1,11 +1,11 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminPage.master.cs" Inherits="Admin" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
     <title></title>
-    <link href="kullanici.css" rel="stylesheet" />
+    <link href="StyleSheetAdmin.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

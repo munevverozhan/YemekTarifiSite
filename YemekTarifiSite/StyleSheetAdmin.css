@@ -1,14 +1,15 @@
 ﻿a:link {
     text-decoration: none;
-    font-size: 14px;
-    font-family: Candara;
+    font-family: 'Comic Sans MS';
     font-style: normal;
+    color: #82589F;
 }
 
-a:hover {
+a:hover { /*mause üzerine gelince yapılacaklar*/
     font-size: 17px;
-    color: #45aaf2;
+    color: #c56cf0;
 }
+
 .textbox {
     border: 1px solid #848484;
     -webkit-border-radius: 30px;
@@ -35,4 +36,3 @@ a:hover {
     height: 35px;
     width: 200px;
 }
-
