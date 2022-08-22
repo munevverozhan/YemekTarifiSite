@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="kullanici.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 700px;
+            height: 900px;
+        }
+
+        .txt {
+            font-family: Cambria;
+            color: #1e272e;
+            font: bold;
+            border: medium groove #ffffff ;
+        }
+        .auto-style2 {
+            width: 100%;
+        }
+      
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="width: 700px; height: 150px; margin-left: 300px;background-color: #FFCC99;"></div> 
+        <div style="margin-left: 300px; width: 700px; height: 20px;">&nbsp;</div>
+        <div style="margin-left: 300px; " class="auto-style1">
+            <div style="border-color: #0fbcf9; margin-left: 0px; float:left; background-color:#0fbcf9; width: 200px; height: auto;">
+                <div>
+                    <table class="auto-style2" >
+                        <tr>
+                            <td ><strong class="txt" >MENÜLER</strong></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td class="txt" > <a href="Kategoriler.aspx">KATEGORİLER</a></td>
+                        </tr>
+                        <tr>
+                            <td class="txt">YEMEKLER</td>
+                        </tr>
+                        <tr>
+                            <td class="txt">YORUMLAR</td>
+                        </tr>
+                        <tr>
+                            <td class="txt">MESAJLAR</td>
+                        </tr>
+                        <tr>
+                            <td class="txt">GÜNÜN YEMEĞİ</td>
+                        </tr>
+                        <tr>
+                            <td class="txt">ÖNERİLER</td>
+                        </tr>
+                        <tr>
+                            <td class="txt">HAKKIMIZDA</td>
+                        </tr>
+                    </table>
+                    <br />
+                    
+                </div>
+            </div> <%--float:left solundakine göre hizalamayı sağlar.--%>
+            <div style="margin-left:50px;float:left; background-color: #F8EFBA; width: 450px; height:auto;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
