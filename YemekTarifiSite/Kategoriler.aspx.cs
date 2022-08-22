@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 
 public partial class Kategoriler : System.Web.UI.Page
 {
+    string id = "";
+    string islem = "";
     void temizle()
     {
         txtKategoriAd.Text = "";
@@ -16,14 +18,31 @@ public partial class Kategoriler : System.Web.UI.Page
     sqlBaglantiClass bgl = new sqlBaglantiClass();
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Page.IsPostBack == false) // sayfanın sürekli yenilenmesini önler.
+        {
+            id = Request.QueryString["kategoriID"];
+            islem = Request.QueryString["islem"];
+
+        }
         SqlCommand cmd = new SqlCommand("select * from tblKategoriler", bgl.Baglanti());
         SqlDataReader dr = cmd.ExecuteReader();
         DataList1.DataSource = dr;
         DataList1.DataBind();
 
+        //SİLME İŞLEMİ
+        if (islem == "sil")
+        {
+            SqlCommand cmd1 = new SqlCommand("delete from tblKategoriler where kategoriID=@p1", bgl.Baglanti());
+            cmd1.Parameters.AddWithValue("@p1", id);
+            cmd1.ExecuteNonQuery();
+            bgl.Baglanti().Close();
+            Response.Write("kategori silindi..");
+            temizle();
+        }
+
+
         Panel2.Visible = false;
         Panel4.Visible = false;
-
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -68,12 +87,12 @@ public partial class Kategoriler : System.Web.UI.Page
                 Response.Write("Kategori başarıyla eklendi...");
                 temizle();
 
-            }          
+            }
         }
         catch (Exception mesaj)
         {
-           Response.Write(mesaj.Message);
+            Response.Write(mesaj.Message);
         }
-      
+
     }
 }

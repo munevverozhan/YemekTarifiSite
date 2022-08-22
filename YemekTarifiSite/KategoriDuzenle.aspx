@@ -39,6 +39,11 @@
                 <asp:Button ID="btnGuncelle" runat="server" CssClass="button" OnClick="btnGuncelle_Click" Text="GÜNCELLE" />
             </td>
         </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
     </table>
 </asp:Content>
 

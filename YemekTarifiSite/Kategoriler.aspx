@@ -56,7 +56,9 @@
                             <asp:Label ID="Label1" runat="server" CssClass="auto-style6" Text='<%# Eval("kategoriAd") %>'></asp:Label>
                         </td>
                         <td class="auto-style5">
-                           <a href="KategoriDuzenle.aspx?kategoriID=<%# Eval("kategoriID")%>" ><asp:Image ID="Image1" runat="server" Height="30px" ImageUrl="~/Iconlar/delete.png" Width="30px" /></a>
+<%--                            AYNI SAYFA İÇİNE YÖNLENDİRME YAPTIĞIMIZ İÇİN &islem PARAMETRESİNİ EKLEDİK...--%>
+                           <a href="Kategoriler.aspx?kategoriID=<%#Eval("kategoriID")%>&islem=sil" ><asp:Image ID="Image1" runat="server" Height="30px" ImageUrl="~/Iconlar/delete.png" Width="30px" /></a>
+                            
                         </td>
                         <td class="auto-style5">
                            <a href="KategoriDuzenle.aspx?kategoriID=<%#Eval("kategoriID")%>"> <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Iconlar/update.png" Width="30px" /></a>
