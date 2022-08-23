@@ -45,7 +45,7 @@
                            <td class="txt" > <a href="Kategoriler.aspx">KATEGORİLER</a></td>
                         </tr>
                         <tr>
-                            <td class="txt">YEMEKLER</td>
+                            <td class="txt"><a href="Yemekler.aspx"> YEMEKLER</a></td>
                         </tr>
                         <tr>
                             <td class="txt">YORUMLAR</td>
