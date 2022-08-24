@@ -35,7 +35,9 @@
     <table class="auto-style2">
         <tr>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Label ID="ilkDeger" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style5">Yemek Ad : </td>
@@ -46,13 +48,13 @@
         <tr>
             <td class="auto-style3">Malzeme : </td>
             <td class="auto-style4">
-                <asp:TextBox ID="txtMalzeme" runat="server" CssClass="auto-style6" Height="164px" Width="272px"></asp:TextBox>
+                <asp:TextBox ID="txtMalzeme" runat="server" CssClass="auto-style6" Height="164px" Width="272px" TextMode="MultiLine"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style5">Tarif :</td>
             <td>
-                <asp:TextBox ID="txtTarif" runat="server" CssClass="auto-style6" Height="196px" Width="270px"></asp:TextBox>
+                <asp:TextBox ID="txtTarif" runat="server" CssClass="auto-style6" Height="196px" Width="270px" TextMode="MultiLine"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -71,7 +73,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-                <asp:Button ID="btnGuncelle" runat="server" CssClass="button" Text="GÜNCELLE" />
+                <asp:Button ID="btnGuncelle" runat="server" CssClass="button" Text="GÜNCELLE" OnClick="btnGuncelle_Click" />
             </td>
         </tr>
     </table>

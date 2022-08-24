@@ -8,17 +8,19 @@ using System.Data.SqlClient;
 public partial class Yemek : System.Web.UI.Page
 {
     sqlBaglantiClass bgl = new sqlBaglantiClass();
-
+    string islem="";
+    string id="";
     protected void Page_Load(object sender, EventArgs e)
     {
-        //yemekleri listeleme işlemi.
-        SqlCommand cmd = new SqlCommand("select yemekAd from tblYemekler", bgl.Baglanti());
-        SqlDataReader dr = cmd.ExecuteReader();
-        DataList1.DataSource = dr;
-        DataList1.DataBind();
+
+        Panel2.Visible = false;
+        Panel4.Visible = false;
 
         if (Page.IsPostBack == false)
         {
+            id = Request.QueryString["yemekID"];
+            islem = Request.QueryString["islem"];
+
             //kategorilerin dropDownList'e çekilmesi işlemi
             SqlCommand cmd1 = new SqlCommand("select * from tblKategoriler ", bgl.Baglanti());
             SqlDataReader dr1 = cmd1.ExecuteReader();
@@ -26,12 +28,41 @@ public partial class Yemek : System.Web.UI.Page
             txtKategori.DataValueField = "kategoriID";
             txtKategori.DataSource = dr1;
             txtKategori.DataBind();
+
+
+            //Yemek silme işlemi
+            if (islem == "sil")
+            {
+                SqlCommand listele = new SqlCommand("select kategoriID from tblYemekler where yemekID=@y1 ", bgl.Baglanti());
+                listele.Parameters.AddWithValue("@y1", id);
+                SqlDataReader drlist = listele.ExecuteReader();
+                while (drlist.Read())
+                {
+                    txtKategori.SelectedValue = drlist[0].ToString();
+                }
+                bgl.Baglanti().Close();
+
+                SqlCommand delete = new SqlCommand("delete  from tblYemekler where yemekID=@p1", bgl.Baglanti());
+                delete.Parameters.AddWithValue("@p1", id);
+                delete.ExecuteNonQuery();
+                bgl.Baglanti().Close();
+                Response.Write("Yemek silindi..");
+                Response.Write(txtKategori.SelectedValue);
+
+                //yemeği sildikten sonra kategoriAdet sayısını 1 azaltma işlemi
+                SqlCommand cmdsil = new SqlCommand("update tblKategoriler set kategoriAdet=kategoriAdet-1 where kategoriID=@p2 ", bgl.Baglanti());
+                cmdsil.Parameters.AddWithValue("@p2", txtKategori.SelectedValue);
+                cmdsil.ExecuteNonQuery();
+                bgl.Baglanti().Close();
+            }
         }
 
 
-        Panel2.Visible = false;
-        Panel4.Visible = false;
-
+        //yemekleri listeleme işlemi.
+        SqlCommand cmd = new SqlCommand("select * from tblYemekler", bgl.Baglanti());
+        SqlDataReader dr = cmd.ExecuteReader();
+        DataList1.DataSource = dr;
+        DataList1.DataBind();
 
     }
 
@@ -84,6 +115,12 @@ public partial class Yemek : System.Web.UI.Page
                 bgl.Baglanti().Close();
                 Response.Write("Yemek eklendi...");
                 temizle();
+
+                //yemek eklendikten sonra ilgili kategorinin kategoriAdet sayısının 1 arttırılması işlemi
+                SqlCommand arttir = new SqlCommand("update tblKategoriler set kategoriAdet=kategoriAdet+1 where kategoriID=@p1", bgl.Baglanti());
+                arttir.Parameters.AddWithValue("@p1", txtKategori.SelectedValue);
+                arttir.ExecuteNonQuery();
+                bgl.Baglanti().Close();
             }
 
 
@@ -93,6 +130,7 @@ public partial class Yemek : System.Web.UI.Page
             Response.Write(ex.Message);
 
         }
+     
     }
 
     protected void Button1_Click(object sender, EventArgs e)

@@ -39,10 +39,20 @@
             height: 27px;
         }
 
+        .auto-style7 {
+            border: 1px solid #848484;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            outline: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:Panel ID="Panel1" runat="server">
+    <asp:Panel ID="Panel1" runat="server" CssClass="font">
         <table class="auto-style2">
             <tr>
                 <td>
@@ -64,18 +74,20 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("yemekAd") %>'></asp:Label>
                         </td>
                         <td class="auto-style4">
-                            <asp:Image ID="Image1" runat="server" Height="30px" ImageUrl="~/Iconlar/delete.png" Width="30px" />
+                            <a href="Yemek.aspx?yemekID=<%#Eval("yemekID")%>&islem=sil"><asp:Image ID="Image1" runat="server" Height="30px" ImageUrl="~/Iconlar/delete.png" Width="30px" /></a>
                         </td>
                         <td class="auto-style4">
-                           <a href="AdminYemekDuzenle.aspx?yemekID=<%# Eval("yemekID") %>"> <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Iconlar/update.png" Width="30px" /></a>
+                           <a href="AdminYemekDuzenle.aspx?yemekID=<%#Eval("yemekID")%>">
+                               <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Iconlar/update.png" Width="30px" /></a>
                         </td>
                     </tr>
                 </table>
             </ItemTemplate>
         </asp:DataList>
-
+       
     </asp:Panel>
-    <asp:Panel ID="Panel3" runat="server">
+     <br />
+    <asp:Panel ID="Panel3" runat="server" CssClass="font">
         <table class="auto-style2">
             <tr>
                 <td>
@@ -107,13 +119,13 @@
         <tr>
             <td class="font">Malzeme :</td>
             <td>
-                <asp:TextBox ID="txtMalzeme" runat="server" CssClass="textbox"></asp:TextBox>
+                <asp:TextBox ID="txtMalzeme" runat="server" CssClass="auto-style7" TextMode="MultiLine" Height="150px" Width="278px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="font">Tarif :</td>
             <td>
-                <asp:TextBox ID="txtTarif" runat="server" CssClass="textbox"></asp:TextBox>
+                <asp:TextBox ID="txtTarif" runat="server" CssClass="auto-style7" TextMode="MultiLine" Height="198px" Width="274px"></asp:TextBox>
             </td>
         </tr>
         <tr>
