@@ -48,7 +48,7 @@
                             <td class="txt"><a href="Yemek.aspx"> YEMEKLER</a></td>
                         </tr>
                         <tr>
-                            <td class="txt">YORUMLAR</td>
+                            <td class="txt"><a href="YorumlarAdmin.aspx"> YORUMLAR </a></td>
                         </tr>
                         <tr>
                             <td class="txt">MESAJLAR</td>
