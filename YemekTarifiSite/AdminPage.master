@@ -51,7 +51,7 @@
                             <td class="txt"><a href="YorumlarAdmin.aspx"> YORUMLAR </a></td>
                         </tr>
                         <tr>
-                            <td class="txt">MESAJLAR</td>
+                            <td class="txt"><a href="AdminMesajlar.aspx"> MESAJLAR </a></td>
                         </tr>
                         <tr>
                             <td class="txt">GÜNÜN YEMEĞİ</td>

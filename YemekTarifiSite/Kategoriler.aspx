@@ -31,6 +31,20 @@
         .auto-style9 {
             margin-left: 40px;
         }
+          .btn {
+            background-color: #ffa502;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            height: 35px;
+            width: 35px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -38,10 +52,10 @@
         <table class="auto-style2">
             <tr>
                 <td class="auto-style8">
-                    <asp:Button ID="Button1" runat="server" CssClass="auto-style7" Font-Bold="True" Height="30px" OnClick="Button1_Click" Text="+" Width="30px" />
+                    <asp:Button ID="Button1" runat="server" CssClass="btn" Font-Bold="True"  OnClick="Button1_Click" Text="+"/>
                 </td>
-                <td class="auto-style8">
-                   <asp:Button ID="Button2" runat="server" CssClass="auto-style7" Font-Bold="True" Height="30px" OnClick="Button2_Click" Text="-" Width="30px" />
+                <td  class="auto-style8">
+                   <asp:Button ID="Button2" runat="server" CssClass="btn" Font-Bold="True"  OnClick="Button2_Click" Text="-"  />
                 </td>
                 <td>KATEGORİ LİSTESİ</td>
             </tr>
@@ -57,11 +71,11 @@
                         </td>
                         <td class="auto-style5">
 <%--                            AYNI SAYFA İÇİNE YÖNLENDİRME YAPTIĞIMIZ İÇİN &islem PARAMETRESİNİ EKLEDİK...--%>
-                           <a href="Kategoriler.aspx?kategoriID=<%#Eval("kategoriID")%>&islem=sil" ><asp:Image ID="Image1" runat="server" Height="30px" ImageUrl="~/Iconlar/delete.png" Width="30px" /></a>
+                           <a href="Kategoriler.aspx?kategoriID=<%#Eval("kategoriID")%>&islem=sil" ><asp:Image ID="Image1" runat="server"  Height="30px" Width="30px" ImageUrl="~/Iconlar/delete.png"  /></a>
                             
                         </td>
                         <td class="auto-style5">
-                           <a href="KategoriDuzenle.aspx?kategoriID=<%#Eval("kategoriID")%>"> <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Iconlar/update.png" Width="30px" /></a>
+                           <a href="KategoriDuzenle.aspx?kategoriID=<%#Eval("kategoriID")%>"> <asp:Image ID="Image2" runat="server" Height="30px" Width="30px" ImageUrl="~/Iconlar/update.png" /></a>
                         </td>
                     </tr>
                     <tr>
@@ -77,10 +91,10 @@
         <table class="auto-style2">
             <tr>
                 <td class="auto-style8">
-                    <asp:Button ID="Button3" runat="server" CssClass="auto-style7" Font-Bold="True" Height="30px" Text="+" Width="30px" OnClick="Button3_Click" />
+                    <asp:Button ID="Button3" runat="server" CssClass="btn" Font-Bold="True" Text="+"  OnClick="Button3_Click" />
                 </td>
                 <td class="auto-style8">
-                    <asp:Button ID="Button4" runat="server" CssClass="auto-style7" Font-Bold="True" Height="30px" Text="-" Width="30px" OnClick="Button4_Click" />
+                    <asp:Button ID="Button4" runat="server" CssClass="btn" Font-Bold="True"  Text="-"  OnClick="Button4_Click" />
                 </td>
                 <td>KATEGORİ EKLEME</td>
             </tr>

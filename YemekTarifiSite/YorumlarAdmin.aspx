@@ -38,6 +38,14 @@
             text-align: right;
         }
 
+        .auto-style10 {
+            width: 76px;
+            text-align: right;
+        }
+        .auto-style12 {
+            width: 55px;
+        }
+
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -45,10 +53,10 @@
     <asp:Panel ID="Panel1" runat="server" CssClass="font">
         <table class="auto-style2">
             <tr>
-                <td class="auto-style4">
+                <td class="auto-style12">
                     <asp:Button ID="Button1" runat="server" CssClass="btn" Font-Bold="True" Text="+" OnClick="Button1_Click1" />
                 </td>
-                <td class="auto-style4">
+                <td class="auto-style10">
                     <asp:Button ID="Button2" runat="server" CssClass="btn" Font-Bold="True"  Text="-"  OnClick="Button2_Click" />
                 </td>
                 <td class="auto-style8">ONAYLANAN YORUM LİSTESİ</td>
@@ -84,10 +92,10 @@
     <asp:Panel ID="Panel3" runat="server" CssClass="font">
          <table class="auto-style2">
             <tr>
-                <td class="auto-style4">
-                    <asp:Button ID="Button3" runat="server" CssClass="btn" Font-Bold="True"  Text="+"  OnClick="Button3_Click" />
+                <td class="auto-style12">
+                    <asp:Button ID="Button3" runat="server" CssClass="btn" Font-Bold="True"  Text="+"  OnClick="Button3_Click"  />
                 </td>
-                <td class="auto-style4">
+                <td class="auto-style10">
                     <asp:Button ID="Button4" runat="server" CssClass="btn" Font-Bold="True" Text="-"  OnClick="Button4_Click" />
                 </td>
                 <td class="auto-style8">ONAYLANMAYAN YORUM LİSTESİ</td>
