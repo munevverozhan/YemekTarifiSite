@@ -10,7 +10,7 @@ public partial class GununYemegi : System.Web.UI.Page
     sqlBaglantiClass bgl = new sqlBaglantiClass();
     protected void Page_Load(object sender, EventArgs e)
     {
-        SqlCommand komut = new SqlCommand("select * from tblGununYemegi", bgl.Baglanti());
+        SqlCommand komut = new SqlCommand("select * from tblYemekler where durum=1", bgl.Baglanti());
         SqlDataReader dr = komut.ExecuteReader();
         DataList2.DataSource = dr;
         DataList2.DataBind();

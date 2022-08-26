@@ -2,20 +2,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
-        .auto-style6 {
-            font-size: xx-large;
-            color: #ffa502;
-        }
+        
 
-      
         .auto-style7 {
             width: 100%;
-        }
-
-        .auto-style8 {
-            font-size: x-large;
-            color: #57606f;
-
         }
 
         .auto-style10 {
@@ -24,11 +14,6 @@
 
         .auto-style11 {
             height: 23px;
-        }
-
-        .auto-style9 {
-            font-size: small;
-            color: #FF0000;
         }
 
         .auto-style12 {
@@ -44,24 +29,46 @@
             padding-left: 10px;
             padding-right: 10px;
         }
+
+        .header {
+            font-family: 'MV Boli';
+            color: #FC427B;
+            font-size: 23px;
+            text-align: center;
+            background-color: #f5f6fa;
+        }
+
+        .headerFont {
+            font-family: 'MV Boli';
+            color: #2ed573;
+            font-size: 18px;
+        }
+
+        .txtFont {
+            font-family: 'Comic Sans MS';
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
     <strong>
-        <asp:Label ID="Label3" runat="server" CssClass="auto-style6" Text="Label"></asp:Label>
+       
+        <asp:Label ID="Label3" runat="server" CssClass="header" Text="Label"></asp:Label>
         &nbsp;
         <asp:DataList ID="DataList2" runat="server">
             <ItemTemplate>
                 <table class="auto-style7">
                     <tr>
-                        <td>&nbsp;<asp:Label ID="Label5" runat="server" CssClass="auto-style8" Text='<%# Eval("yorumAdSoyad") %>'></asp:Label>
+                        <td>&nbsp;<asp:Label ID="Label5" runat="server" CssClass="headerFont" Text='<%# Eval("yorumAdSoyad") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style11">&nbsp;<asp:Label ID="Label8" runat="server" CssClass="auto-style10" Text='<%# Eval("yorumIcerik") %>'></asp:Label>
+                        <td class="auto-style11">&nbsp;
+                            <asp:Label ID="Label8" runat="server" CssClass="txtFont" Text='<%# Eval("yorumIcerik") %>'></asp:Label>
                             &nbsp;--<strong>
-                                <asp:Label ID="Label7" runat="server" CssClass="auto-style9" Text='<%# Eval("yorumTarih") %>'></asp:Label>
-                            </strong>&nbsp;&nbsp; </td>
+                            <asp:Label ID="Label7" runat="server" CssClass="txtFont" Text='<%# Eval("yorumTarih") %>'></asp:Label>
+                            </strong>&nbsp;&nbsp; 
+
+                        </td>
                     </tr>
                     <tr>
                         <td style="border-bottom-style: dotted; border-bottom-color: #000000; border-bottom-width: thick;">&nbsp;</td>
@@ -70,7 +77,7 @@
             </ItemTemplate>
         </asp:DataList>
         <br />
-        <div style="background-color: #7bed9f; color: #2C3A47;">YORUM YAPMA PANELİ </div>
+        <div class="header">YORUM YAPMA PANELİ </div>
         <asp:Panel ID="Panel1" runat="server">
             <table class="auto-style7">
                 <tr>
@@ -91,7 +98,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style12">Yorumunuz : </td>
-                    <td >
+                    <td>
                         <asp:TextBox ID="txtYorum" runat="server" TextMode="MultiLine" CssClass="auto-style14" Height="69px" Width="275px"></asp:TextBox>
                     </td>
                 </tr>

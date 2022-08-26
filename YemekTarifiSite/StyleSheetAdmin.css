@@ -36,3 +36,22 @@ a:hover { /*mause üzerine gelince yapılacaklar*/
     height: 35px;
     width: 200px;
 }
+.txtFont {
+    font-family: 'Comic Sans MS';
+}
+.headerFont {
+    font-family: 'MV Boli';
+    color: #2ed573;
+    font-size: 18px;
+}
+.header {
+    font-family: 'MV Boli';
+    color: #FC427B;
+    font-size: 23px;
+  
+}
+.auto-style10 {
+    text-align: center;
+    background-color: #f5f6fa;
+}
+
