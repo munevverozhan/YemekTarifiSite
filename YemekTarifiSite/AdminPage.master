@@ -35,7 +35,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="width: 700px; height: 150px; margin-left: 300px; background-color: #FFCC99;"></div>
+        <div style="width: 700px; height: 300px; margin-left: 300px; background-color: #FFCC99;">
+            <asp:Image ID="Image1" runat="server" Height="300px" ImageUrl="~/Pictures/telegram-messenger-admins.jpg" Width="701px" />
+        </div>
         <div style="margin-left: 300px; width: 700px; height: 20px;">&nbsp;</div>
         <div style="margin-left: 300px;" class="auto-style1">
             <div style="border-color: #0fbcf9; margin-left: 0px; float: left; background-color: #0fbcf9; width: 200px; height: auto;">

@@ -39,7 +39,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="width: 700px; height: 150px; margin-left: 300px;background-color: #FFCC99;"></div> 
+        <div style="width: 700px; height: 300px; margin-left: 300px;background-color: #FFCC99;">
+            <asp:Image ID="Image1" runat="server" Height="300px" ImageUrl="~/Pictures/pexels-photo-3758028.jpeg" Width="700px" />
+        </div> 
         <div style="margin-left: 300px; width: 700px; height: 20px;">&nbsp;</div>
         <div style="width: 700px; height: 40px; margin-left: 300px; background-color: #ffffff ";>
             <table style="font-size: medium;" class="auto-style5">
