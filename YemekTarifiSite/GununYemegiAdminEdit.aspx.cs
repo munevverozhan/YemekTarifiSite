@@ -51,4 +51,11 @@ public partial class GununYemegiAdminEdit : System.Web.UI.Page
         update.ExecuteNonQuery();
         Response.Write("Yemek güncellendi.");
     }
+
+    protected void btnSil_Click(object sender, EventArgs e)
+    {
+        SqlCommand cmd = new SqlCommand("update tblYemekler set durum=0", bgl.Baglanti());
+        cmd.ExecuteNonQuery();
+        bgl.Baglanti().Close();
+    }
 }

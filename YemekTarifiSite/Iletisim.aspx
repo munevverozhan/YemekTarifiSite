@@ -7,8 +7,6 @@
             width: 100%;
         }
 
-
-
         .auto-style7 {
             text-align: right;
         }
@@ -22,11 +20,9 @@
             height: 26px;
         }
 
-        .auto-style10 {
+        .auto-style12 {
             height: 26px;
         }
-
-
 
         .auto-style11 {
             border: 1px solid #848484;
@@ -67,7 +63,7 @@
         </tr>
         <tr>
             <td class="auto-style9"><strong>Konu : </strong></td>
-            <td class="auto-style10">
+            <td class="auto-style12">
                 <asp:TextBox ID="txtKonu" runat="server" CssClass="textbox"></asp:TextBox>
             </td>
         </tr>

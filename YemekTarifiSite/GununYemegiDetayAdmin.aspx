@@ -95,17 +95,12 @@
                 </tr>
                 <tr>
                     <td class="auto-style10" style="border-width: medium; border-style: none none double none; border-bottom-color: #660066">
-                        <asp:Button ID="btnEkle" runat="server" CssClass="button" OnClick="btnEkle_Click" Text="EKLE" />
+                        <asp:Button ID="btnEkle" runat="server" CssClass="button" OnClick="btnEkle_Click" Text="Günün Yemeği Yap" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style10" style="border-width: medium; border-style: none none double none; border-bottom-color: #660066">
                         <asp:Button ID="btnListele" runat="server" CssClass="button" OnClick="btnListele_Click" Text="LİSTELE" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style10" style="border-width: medium; border-style: none none double none; border-bottom-color: #660066">
-                        <asp:Button ID="btnSil" runat="server" CssClass="button" Text="SİL" OnClick="btnSil_Click" />
                     </td>
                 </tr>
             </table>

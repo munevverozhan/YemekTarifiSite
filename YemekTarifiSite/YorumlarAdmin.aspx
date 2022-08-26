@@ -38,7 +38,7 @@
             text-align: right;
         }
 
-        .auto-style10 {
+        .auto-style13 {
             width: 76px;
             text-align: right;
         }
@@ -56,7 +56,7 @@
                 <td class="auto-style12">
                     <asp:Button ID="Button1" runat="server" CssClass="btn" Font-Bold="True" Text="+" OnClick="Button1_Click1" />
                 </td>
-                <td class="auto-style10">
+                <td class="auto-style13">
                     <asp:Button ID="Button2" runat="server" CssClass="btn" Font-Bold="True"  Text="-"  OnClick="Button2_Click" />
                 </td>
                 <td class="auto-style8">ONAYLANAN YORUM LİSTESİ</td>
@@ -95,7 +95,7 @@
                 <td class="auto-style12">
                     <asp:Button ID="Button3" runat="server" CssClass="btn" Font-Bold="True"  Text="+"  OnClick="Button3_Click"  />
                 </td>
-                <td class="auto-style10">
+                <td class="auto-style13">
                     <asp:Button ID="Button4" runat="server" CssClass="btn" Font-Bold="True" Text="-"  OnClick="Button4_Click" />
                 </td>
                 <td class="auto-style8">ONAYLANMAYAN YORUM LİSTESİ</td>

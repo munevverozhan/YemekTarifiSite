@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.master" AutoEventWireup="true" CodeFile="TarifOner.aspx.cs" Inherits="TarifOner" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPage.master" AutoEventWireup="true" CodeFile="TarifOnerAdminDetay.aspx.cs" Inherits="TarifOnerAdminDetay" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
@@ -49,13 +49,13 @@
         <tr>
             <td class="auto-style6"><strong>Malzemeler :</strong></td>
             <td class="auto-style11">
-                <asp:TextBox ID="txtMalzeme" runat="server" TextMode="MultiLine" CssClass="auto-style13" Height="79px" Width="273px"></asp:TextBox>
+                <asp:TextBox ID="txtMalzeme" runat="server" TextMode="MultiLine" CssClass="auto-style13" Height="181px" Width="296px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style6"><strong>Yapılış :</strong></td>
             <td class="auto-style11">
-                <asp:TextBox ID="txtYapilis" runat="server" TextMode="MultiLine" CssClass="auto-style13" Height="84px" Width="277px"></asp:TextBox>
+                <asp:TextBox ID="txtYapilis" runat="server" TextMode="MultiLine" CssClass="auto-style13" Height="183px" Width="296px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -77,11 +77,27 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style6"><strong>Kategori :</strong></td>
+            <td>
+                <asp:DropDownList ID="txtKategori" runat="server" CssClass="textbox">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
             <td>&nbsp;</td>
-            <td><strong><em>
-                <asp:Button ID="btnTarifOner" runat="server" CssClass="button" Text="TARİF ÖNER" OnClick="btnTarifOner_Click" />
+            <td class="auto-style11"><strong><em>
+                <asp:Button ID="btnOnayla" runat="server" CssClass="button" Text="ONAYLA" OnClick="btnOnayla_Click"  />
             </em></strong></td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="lblKategori" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style11">
+                <asp:Label ID="lblID" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
         </tr>
     </table>
 </asp:Content>
+
 

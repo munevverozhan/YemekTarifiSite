@@ -65,7 +65,7 @@
                             <td class="txt"><a href="GununYemegiAdmin.aspx">GÜNÜN YEMEĞİ</a></td>
                         </tr>
                         <tr>
-                            <td class="txt">ÖNERİLER</td>
+                            <td class="txt"><a href="TarifOnerAdmin.aspx">TARİF ÖNERİLERİ</a></td>
                         </tr>
                         <tr>
                             <td class="txt">HAKKIMIZDA</td>
