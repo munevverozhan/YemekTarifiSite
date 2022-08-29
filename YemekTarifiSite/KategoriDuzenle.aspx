@@ -28,12 +28,6 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style3">RESİM :</td>
-            <td>
-                <asp:FileUpload ID="fileKategoriResim" runat="server" CssClass="textbox" />
-            </td>
-        </tr>
-        <tr>
             <td>&nbsp;</td>
             <td>
                 <asp:Button ID="btnGuncelle" runat="server" CssClass="button" OnClick="btnGuncelle_Click" Text="GÜNCELLE" />

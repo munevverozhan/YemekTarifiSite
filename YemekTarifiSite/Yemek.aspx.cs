@@ -82,7 +82,7 @@ public partial class Yemek : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@p1", txtAd.Text);
             cmd.Parameters.AddWithValue("@p2", txtMalzeme.Text);
             cmd.Parameters.AddWithValue("@p3", txtTarif.Text);
-            cmd.Parameters.AddWithValue("@p4", txtResim.FileName);
+            cmd.Parameters.AddWithValue("@p4", "~/Pictures/"+txtResim.FileName);
             cmd.Parameters.AddWithValue("@p5", txtKategori.SelectedValue);
             if (txtAd.Text == "")
             {
@@ -122,6 +122,7 @@ public partial class Yemek : System.Web.UI.Page
                 arttir.ExecuteNonQuery();
                 bgl.Baglanti().Close();
             }
+            txtResim.SaveAs(Server.MapPath("/Pictures/" + txtResim.FileName));
 
 
         }

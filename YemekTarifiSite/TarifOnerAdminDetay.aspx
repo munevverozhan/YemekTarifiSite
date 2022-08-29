@@ -61,7 +61,7 @@
         <tr>
             <td class="auto-style6"><strong>Resim :</strong></td>
             <td>
-                <asp:FileUpload ID="txtResim" runat="server" CssClass="textbox" />
+                <asp:FileUpload ID="FileUpload1" runat="server" CssClass="textbox" />
             </td>
         </tr>
         <tr>

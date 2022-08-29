@@ -67,7 +67,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style6">
-                        <asp:Image ID="Image2" runat="server" Height="270px" ImageUrl="~/Pictures/29829988-raspberry-cheesecake-isolated-on-white.jpg" Width="316px" />
+                        <asp:Image ID="Image2" runat="server" Height="270px" Width="316px" ImageUrl='<%# Eval("yemekResim") %>' />
                     </td>
                 </tr>
                 <tr>

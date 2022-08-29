@@ -69,17 +69,13 @@ public partial class Kategoriler : System.Web.UI.Page
     {
         try
         {
-            SqlCommand cmd1 = new SqlCommand("insert into tblKategoriler(kategoriAd,kategoriResim) values(@p1,@p2)", bgl.Baglanti());
+            SqlCommand cmd1 = new SqlCommand("insert into tblKategoriler(kategoriAd) values(@p1)", bgl.Baglanti());
             cmd1.Parameters.AddWithValue("@p1", txtKategoriAd.Text);
-            cmd1.Parameters.AddWithValue("@p2", kategoriIcon.FileName);
+            
             if (txtKategoriAd.Text == "")
             {
                 Response.Write("Lütfen bir kategori ismi giriniz...");
-            }
-            else if (kategoriIcon.FileName == "")
-            {
-                Response.Write("Lütfen bir kategori iconu seçiniz...");
-            }
+            }  
             else
             {
                 cmd1.ExecuteNonQuery();

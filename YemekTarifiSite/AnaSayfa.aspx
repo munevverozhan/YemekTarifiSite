@@ -58,7 +58,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td><strong class="headerFont">Eklenme Tarihi :</strong>&nbsp;<asp:Label ID="Label7" runat="server" Text='<%# Eval("yemekTarih") %>'></asp:Label>

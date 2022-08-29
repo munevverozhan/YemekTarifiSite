@@ -37,16 +37,15 @@ public partial class KategoriDetayAdmin : System.Web.UI.Page
 
     protected void btnGuncelle_Click(object sender, EventArgs e)
     {
-        SqlCommand cmd = new SqlCommand("update tblKategoriler set kategoriAd=@p1,kategoriAdet=@p2,kategoriResim=@p3 where kategoriID=@p4", bgl.Baglanti());
+        SqlCommand cmd = new SqlCommand("update tblKategoriler set kategoriAd=@p1,kategoriAdet=@p2 where kategoriID=@p3", bgl.Baglanti());
         cmd.Parameters.AddWithValue("@p1",txtKategoriAd.Text);
         cmd.Parameters.AddWithValue("@p2",txtKategoriAdet.Text);
-        cmd.Parameters.AddWithValue("@p3",fileKategoriResim.FileName);
-        cmd.Parameters.AddWithValue("@p4",idKategori);
+        cmd.Parameters.AddWithValue("@p3",idKategori);
         cmd.ExecuteNonQuery();
         bgl.Baglanti().Close();
         Response.Write("Kategori güncellendi...");
         temizle();
-      
+
 
     }
 }

@@ -21,8 +21,7 @@ public partial class GununYemegiAdminEdit : System.Web.UI.Page
             {
                 txtAd.Text = dr[1].ToString();
                 txtMalzeme.Text = dr[2].ToString();
-                txtTarif.Text = dr[3].ToString();
-                txtResim.AccessKey = dr[4].ToString();
+                txtTarif.Text = dr[3].ToString();             
                 txtKategori.SelectedValue = dr[7].ToString();
             }
             bgl.Baglanti().Close();
@@ -45,11 +44,14 @@ public partial class GununYemegiAdminEdit : System.Web.UI.Page
         update.Parameters.AddWithValue("@p1",txtAd.Text);
         update.Parameters.AddWithValue("@p2",txtMalzeme.Text);
         update.Parameters.AddWithValue("@p3",txtTarif.Text);
-        update.Parameters.AddWithValue("@p4",txtResim.FileName);
+        update.Parameters.AddWithValue("@p4","~/Pictures/"+ txtResim.FileName);
         update.Parameters.AddWithValue("@p5",txtKategori.SelectedValue);
         update.Parameters.AddWithValue("@p6",id);
         update.ExecuteNonQuery();
         Response.Write("Yemek güncellendi.");
+
+        //fileUpload kullanarak resim ekleme işlemi.
+        txtResim.SaveAs(Server.MapPath("/Pictures/" + txtResim.FileName));
     }
 
     protected void btnSil_Click(object sender, EventArgs e)

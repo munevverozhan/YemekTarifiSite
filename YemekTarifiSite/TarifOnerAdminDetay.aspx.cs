@@ -22,7 +22,6 @@ public partial class TarifOnerAdminDetay : System.Web.UI.Page
                 txtTarif.Text = dr[1].ToString();
                 txtMalzeme.Text = dr[2].ToString();
                 txtYapilis.Text = dr[3].ToString();
-               // txtResim.AccessKey = dr[4].ToString();
                 txtTarifSahip.Text = dr[5].ToString();
                 txtMail.Text = dr[6].ToString();
                 txtKategori.SelectedValue = dr[8].ToString();
@@ -36,29 +35,32 @@ public partial class TarifOnerAdminDetay : System.Web.UI.Page
             txtKategori.DataTextField = "kategoriAd";
             txtKategori.DataSource = list;
             txtKategori.DataBind();
+
         }
     }
 
     protected void btnOnayla_Click(object sender, EventArgs e)
     {
-        SqlCommand cmd = new SqlCommand("update tblTarifler set tarifAd=@p1,tarifMalzeme=@p2,tarifYapilis=@p3,tarifSahip=@p4,tarifSahipMail=@p5,tarifDurum=1,kategoriID=@p6 where tarifID=@p7", bgl.Baglanti());
+        SqlCommand cmd = new SqlCommand("update tblTarifler set tarifAd=@p1,tarifMalzeme=@p2,tarifYapilis=@p3,tarifSahip=@p4,tarifSahipMail=@p5,tarifDurum=1,kategoriID=@p6,tarifResim=@p8 where tarifID=@p7", bgl.Baglanti());
         cmd.Parameters.AddWithValue("@p1",txtTarif.Text);
         cmd.Parameters.AddWithValue("@p2",txtMalzeme.Text);
         cmd.Parameters.AddWithValue("@p3",txtYapilis.Text);
         cmd.Parameters.AddWithValue("@p4",txtTarifSahip.Text);
         cmd.Parameters.AddWithValue("@p5",txtMail.Text);
         cmd.Parameters.AddWithValue("@p6", txtKategori.Text);
+        cmd.Parameters.AddWithValue("@p8", "~/Pictures/"+FileUpload1.FileName);
         cmd.Parameters.AddWithValue("@p7",id);
         cmd.ExecuteNonQuery();
         bgl.Baglanti().Close();
 
         //onaylanan yemeğin ana sayfada görüntülenme işlemi
-        SqlCommand ekle = new SqlCommand("insert into tblYemekler(yemekAd,yemekMalzeme,yemekTarif,yemekResim,kategoriID) values(@p1,@p2,@p3,@p4,@p5)  ", bgl.Baglanti());
+        SqlCommand ekle = new SqlCommand("insert into tblYemekler(yemekAd,yemekMalzeme,yemekTarif,kategoriID,yemekResim) values(@p1,@p2,@p3,@p4,@p5)  ", bgl.Baglanti());
         ekle.Parameters.AddWithValue("@p1",txtTarif.Text);
         ekle.Parameters.AddWithValue("@p2",txtMalzeme.Text);
         ekle.Parameters.AddWithValue("@p3",txtYapilis.Text);
-        ekle.Parameters.AddWithValue("@p4",txtResim.AccessKey);
-        ekle.Parameters.AddWithValue("@p5",txtKategori.Text);
+        ekle.Parameters.AddWithValue("@p4",txtKategori.Text);
+        ekle.Parameters.AddWithValue("@p5","~/Pictures/"+FileUpload1.FileName);
+
         ekle.ExecuteNonQuery();
         bgl.Baglanti().Close();
 
@@ -67,6 +69,8 @@ public partial class TarifOnerAdminDetay : System.Web.UI.Page
         guncelle.Parameters.AddWithValue("@p1", txtKategori.SelectedValue);
         guncelle.ExecuteNonQuery();
         bgl.Baglanti().Close();
+
+        FileUpload1.SaveAs(Server.MapPath("/Pictures/" + FileUpload1.FileName));
 
 
     }

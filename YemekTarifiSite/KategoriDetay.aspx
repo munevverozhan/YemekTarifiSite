@@ -4,24 +4,19 @@
     <style type="text/css">
 
         .auto-style6 {
-            width: 100%;
-        }
-
-        .auto-style8 {
-            background-color: #7bed9f;
-        }
-
-        .auto-style7 {
-            font-size: x-large;
-            font-family: 'Franklin Gothic Medium';
+            width: 102%;
         }
 
         .text {
             font-family: 'Comic Sans MS';
         }
-    
-        .auto-style9 {
-            height: 23px;
+        .auto-style11 {
+            background-color: #CCFFCC;
+            font-family: cursive;
+            width: 379px;
+        }
+        .auto-style12 {
+            width: 379px;
         }
 
         </style>
@@ -31,32 +26,34 @@
     <ItemTemplate>
         <table class="auto-style6">
             <tr>
-                <td class="auto-style8"><%-- yemek detay formuna yönlendirme işlemi yapıldı.seçilen yemeğin id değeri elde edildi. --%><a href="YemekDetay.aspx?yemekID=<%#Eval("yemekID")%>">
-                    <asp:Label  ID="Label9" runat="server" CssClass="auto-style7" Text='<%# Eval("yemekAd") %>'></asp:Label>
+                <td class="auto-style10"><%-- yemek detay formuna yönlendirme işlemi yapıldı.seçilen yemeğin id değeri elde edildi. --%><a href="YemekDetay.aspx?yemekID=<%#Eval("yemekID")%>">
+                    <asp:Label  ID="Label9" runat="server" CssClass="header" Text='<%# Eval("yemekAd") %>'></asp:Label>
                     </a></td>
             </tr>
             <tr>
-                <td><strong>Malzemeler :</strong>
-                    <asp:Label class="text" ID="Label10" runat="server" Text='<%# Eval("yemekMalzeme") %>'></asp:Label>
+                <td class="auto-style12"><strong class="headerFont">Malzemeler :</strong>
+                    <asp:Label class="text" ID="Label10" runat="server" CssClass="txtFont" Text='<%# Eval("yemekMalzeme") %>'></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td><strong>Yapılış :</strong>
-                    <asp:Label class="text" ID="Label5" runat="server" Text='<%# Eval("yemekTarif") %>'></asp:Label>
+                <td class="auto-style12"><strong class="headerFont">Yapılış :</strong>
+                    <asp:Label class="text" ID="Label5" runat="server"  CssClass="txtFont" Text='<%# Eval("yemekTarif") %>'></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td><strong>Eklenme Tarihi :</strong>&nbsp;<asp:Label ID="Label7" runat="server" Text='<%# Eval("yemekTarih") %>'></asp:Label>
-                        &nbsp; <strong>Puan :</strong>
-                    <asp:Label class="text" ID="Label8" runat="server" Text='<%# Eval("yemekPuan") %>'></asp:Label>
+                <td class="auto-style12">
+                    <asp:Image ID="Image2" runat="server" Height="230px" ImageUrl='<%# Eval("yemekResim") %>' Width="417px" />
                 </td>
             </tr>
             <tr>
-                <td><strong>Kategori :</strong>
-                    <asp:Label ID="Label11" runat="server" Text='<%# Eval("kategoriID") %>'></asp:Label>
+                <td class="auto-style12"><strong class="headerFont">Eklenme Tarihi :</strong>&nbsp;<asp:Label ID="Label7" runat="server" Text='<%# Eval("yemekTarih") %>'></asp:Label>
+                        &nbsp; <strong class="headerFont">Puan :</strong>
+                    <asp:Label class="text" ID="Label8" runat="server"  CssClass="txtFont" Text='<%# Eval("yemekPuan") %>'></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style12"><strong class="headerFont">Kategori :</strong>
+                    <asp:Label ID="Label11" runat="server"  CssClass="txtFont" Text='<%# Eval("kategoriID") %>'></asp:Label>
                 </td>
             </tr>
             <tr>

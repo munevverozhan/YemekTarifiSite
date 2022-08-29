@@ -20,10 +20,6 @@
             font-size: large;
         }
 
-        .auto-style7 {
-            font-size: x-large;
-        }
-
         .auto-style8 {
             text-align: center;
         }
@@ -110,16 +106,6 @@
                 <td class="txt">Kategori Ad:&nbsp;</td>
                 <td class="auto-style9">
                     <asp:TextBox ID="txtKategoriAd" runat="server" CssClass="textbox"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="txt">Kategori Icon : </td>
-                <td class="auto-style9">
-
-
-                    <asp:FileUpload ID="kategoriIcon" runat="server" CssClass="textbox" />
-
-
                 </td>
             </tr>
             <tr>

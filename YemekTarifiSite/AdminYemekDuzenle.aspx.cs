@@ -10,7 +10,6 @@ public partial class AdminYemekDuzenle : System.Web.UI.Page
     sqlBaglantiClass bgl = new sqlBaglantiClass();
     string id;
 
-
 protected void Page_Load(object sender, EventArgs e)
     {
         id = Request.QueryString["yemekID"];
@@ -37,10 +36,7 @@ protected void Page_Load(object sender, EventArgs e)
             txtKategori.DataSource = list;
             txtKategori.DataBind();
 
-        }
-         
-
-     
+        }   
     }
 
     protected void btnGuncelle_Click(object sender, EventArgs e)
@@ -59,7 +55,7 @@ protected void Page_Load(object sender, EventArgs e)
         cmd.Parameters.AddWithValue("@p1", txtYemekAd.Text);
         cmd.Parameters.AddWithValue("@p2", txtMalzeme.Text);
         cmd.Parameters.AddWithValue("@p3", txtTarif.Text);
-        cmd.Parameters.AddWithValue("@p4", txtResim.FileName);
+        cmd.Parameters.AddWithValue("@p4","~/Pictures/"+txtResim.FileName);
         cmd.Parameters.AddWithValue("@p5", txtKategori.SelectedValue);
         cmd.Parameters.AddWithValue("@p6", id);
         cmd.ExecuteNonQuery();
@@ -77,9 +73,9 @@ protected void Page_Load(object sender, EventArgs e)
         cmdSil.Parameters.AddWithValue("@k1", ilkDeger.Text);
         cmdSil.ExecuteNonQuery();
         bgl.Baglanti().Close();
-        
 
-    
+        //fileUpload kullanarak resim ekleme işlemi.
+        txtResim.SaveAs(Server.MapPath("/Pictures/" + txtResim.FileName));
 
     }
 

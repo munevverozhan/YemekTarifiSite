@@ -59,12 +59,6 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style6"><strong>Resim :</strong></td>
-            <td>
-                <asp:FileUpload ID="txtResim" runat="server" CssClass="textbox" />
-            </td>
-        </tr>
-        <tr>
             <td class="auto-style6"><strong>Tarif Sahibi :</strong></td>
             <td>
                 <asp:TextBox ID="txtTarifSahip" runat="server" CssClass="textbox"></asp:TextBox>

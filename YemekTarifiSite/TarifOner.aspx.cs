@@ -26,13 +26,12 @@ public partial class TarifOner : System.Web.UI.Page
     }
     protected void btnTarifOner_Click(object sender, EventArgs e)
     {
-        SqlCommand komut = new SqlCommand("insert into tblTarifler(tarifAd,tarifMalzeme,tarifYapilis,tarifResim,tarifSahip,tarifSahipMail) values(@p1,@p2,@p3,@p4,@p5,@p6)", bgl.Baglanti());
+        SqlCommand komut = new SqlCommand("insert into tblTarifler(tarifAd,tarifMalzeme,tarifYapilis,tarifSahip,tarifSahipMail) values(@p1,@p2,@p3,@p4,@p5)", bgl.Baglanti());
         komut.Parameters.AddWithValue("@p1",txtTarif.Text);
         komut.Parameters.AddWithValue("@p2",txtMalzeme.Text);
         komut.Parameters.AddWithValue("@p3",txtYapilis.Text);
-        komut.Parameters.AddWithValue("@p4",txtResim.FileName);
-        komut.Parameters.AddWithValue("@p5",txtTarifSahip.Text);
-        komut.Parameters.AddWithValue("@p6",txtMail.Text);
+        komut.Parameters.AddWithValue("@p4",txtTarifSahip.Text);
+        komut.Parameters.AddWithValue("@p5",txtMail.Text);
         if (txtTarif.Text == "")
         {
             Response.Write("Lütfen tarifin ismini giriniz...");
@@ -45,10 +44,7 @@ public partial class TarifOner : System.Web.UI.Page
         {
             Response.Write("Lütfen tarifin yapılışını giriniz...");
         }
-        else if (txtResim.FileName == "")
-        {
-            Response.Write("Lütfen tarifin resimini seçiniz...");
-        }
+       
         else if (txtTarifSahip.Text == "")
         {
             Response.Write("Lütfen isminizi giriniz...");
@@ -65,8 +61,6 @@ public partial class TarifOner : System.Web.UI.Page
             Response.Write("Tarifiniz alınmıştır.Teşekkür ederiz..");
 
         }
-
-
-
+        
     }
 }
