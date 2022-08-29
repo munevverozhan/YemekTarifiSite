@@ -68,7 +68,7 @@
                             <td class="txt"><a href="TarifOnerAdmin.aspx">TARİF ÖNERİLERİ</a></td>
                         </tr>
                         <tr>
-                            <td class="txt">HAKKIMIZDA</td>
+                            <td class="txt"><a href="HakkimizdaAdmin.aspx"> HAKKIMIZDA</a></td>
                         </tr>
                     </table>
                     <br />

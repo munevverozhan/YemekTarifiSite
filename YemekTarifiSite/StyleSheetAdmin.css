@@ -54,4 +54,22 @@ a:hover { /*mause üzerine gelince yapılacaklar*/
     text-align: center;
     background-color: #f5f6fa;
 }
+.btn {
+    background-color: #ffa502;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    height: 35px;
+    width: 35px;
+}
+.font {
+    background-color: #CCFFCC;
+    font-family: cursive;
+}
 
